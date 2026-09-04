@@ -2,9 +2,9 @@
   "$schema": "./node_modules/turbo/schema.json",
   "globalDependencies": ["tsconfig.base.json"],
   "tasks": {
-    "build": {
+  "build": {
       "dependsOn": ["^build"],
-      "outputs": ["build/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "lint": {
       "dependsOn": ["^build"]
@@ -12,5 +12,7 @@
     "typecheck": {
       "dependsOn": ["^build"]
     }
+
+    
   }
 }
